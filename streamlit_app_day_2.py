@@ -85,4 +85,7 @@ with results:
 
 with viewer:
     st.subheader("Viewer")
+    st.write("Complete model:")
     components.iframe(src=get_embedded_viewer_url(client), height=400)
+    st.write("Karamba model:")
+    components.iframe(src=get_embedded_viewer_url(client, branch_name="karamba"), height=400)
